@@ -1,0 +1,631 @@
+<html>
+    <head>
+        <title>Dinner Menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body{
+                margin: 0%;
+                padding: 0%;
+                background:#f3f3f3;
+            } .breakfast{
+                position: relative;
+            }.breakfast img{
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }.breakfast div i{
+                position: fixed;
+                display: inline-block;
+                top:90%;
+                left:95%;
+                font-size: 50px;
+                width: fit-content;
+                height: max-content;
+                color: #ff511c;
+            }
+            .timing{
+                opacity: 0.8;
+                height: 630px;
+                width: 350px;
+                text-align: center;
+                background: white;
+                margin-left: 470px;
+                margin-top: -382px;
+            }.timing-h{
+                cursor: pointer;
+            }.time{
+                height: 170px;
+                font-size: 20px;
+                background: silver;
+                padding-top: 30px;
+            }.time h1{
+                font-size: 30px;
+                margin-top: 20px;
+            }.timing img{
+                height: 150px;
+                width: 150px;
+                margin-top: -90px;
+            }.timing h3{
+                font-weight:100;
+            }.timing button{
+                height: 50px;
+                width: 150px;
+                font-size: 15px;
+                font-weight: bold;
+                color:#fba640;
+                border: 2px solid #fba640;
+                border-radius: 50px;
+                margin-top: 30px;
+            }.timing button:hover{
+                width: 170px;
+                color:white;
+                background:#fba640;
+                border-radius: 50px;
+                box-shadow:5px 5px 5px #ff511c;
+                cursor: pointer;
+            }.timing-h:hover{
+                height:630px;
+                margin-top: -10px;
+                box-shadow: 7px 7px 7px #ff511c;
+            }
+
+
+            .gallery-box{
+                margin-top:10px;
+                margin-left:100px;
+            }.gallery-box tr td{
+                background: white;
+                height: 440px;
+                text-align: center;
+                border: 2px solid silver;
+            }.gallery-box tr td:hover{
+                border: 2px solid red;
+            }.gallery{
+                width:200px;
+                height:200px;
+                margin: 30px 30px 10px 30px;
+            }.gallery:hover{
+                opacity:0.7;
+                transform: scale(1.1,1.1);
+                cursor: pointer;
+            }.food-title{
+                padding:0px;
+            }.food-title h1{
+                text-align: center;
+                font-weight:bold;
+                font-size: 23px;
+            }.desc-food p{
+                font-size: 16px;
+                font-family:sans-serif;
+                margin-bottom:35px;
+            }.odear-now a{
+                border: 2px solid #ff511c;
+                text-decoration: none;
+                padding: 5px 30px;
+                margin-top: 20px;
+                font-size: 25px;
+                background: #ff511c;
+                font-weight: bold;
+                color:white;
+            }.odear-now a:hover{
+                border: 2px solid red;
+                padding: 5px 45px;
+                background: red;
+                color:white;
+            }.price{
+               font-weight: bold;
+                margin: 30px 0px 20px 0px;
+            }.price l{
+                font-family:sans-serif;
+                text-decoration: line-through;
+                cursor: pointer;
+            }.price span i{
+                width: 18px;
+                height: 18px;
+                margin-left: 150px;
+                border: 2px solid silver;
+                background:silver ;
+                border-radius: 50%;
+                padding: 2px;
+                font-size: 20px;
+               
+                color:white;
+            }.price span i:hover{
+            
+                border: 2px solid red;
+                background:red;
+                cursor: pointer;
+                color:white;
+            }.gallery-button{
+                margin-left:520px;
+                margin-top:30px;	
+            }.gallery-button-2{
+                margin-left:22px;
+                height:50px;
+                width:280px;
+                color: white;
+                font-size:20px;
+                background: #ff511c;
+                border:1px solid  #ff511c;	
+            }.gallery-button-2:hover{
+                background:red;
+                border:1px solid red;
+                cursor: pointer;
+            }
+
+            .footer .footer-2{
+                margin-top: 100px;
+                height: 71%;
+                display: flex;
+                background:#272727;
+            }.about-1{
+                color:white;
+                line-height: 5px;
+                margin-left:60px;
+                margin-right: 310px;
+                float:left;	
+            }#hr-1{
+                border-top: 2px solid red;
+                width:67px;
+                margin-top:-55px;
+                margin-bottom:60px;
+                cursor: pointer;
+            }.about-1 h1{
+                padding-bottom:50px;
+                cursor: pointer;
+            }.about-1 h4{
+                cursor: pointer;
+            }.about-1 h3{
+                padding-bottom: 10px;
+                cursor: pointer;
+            }.about-center{
+                float:left;
+                display: block;
+            }.about-center-img{
+                width:400px;
+                height:200px;
+                margin-left: -130px;
+                padding-left:10px;
+            }.about-center h3{
+                color:white;
+                font-size:27px;
+                margin-left:-110px;
+                margin-top:20px;	
+            }.about-center i{
+                color: #ff511c; 
+                text-align: center;
+                right: 100px;
+                padding-left: 10px;
+                font-size:50px;
+            }.about-center i:hover{
+                color: red;
+                cursor: pointer;
+            }.about-right{
+                display: inline-block;
+                color:white;
+                margin-left:240px;
+                line-height:30px;
+                text-decoration: none;
+            }.link{
+                color:white;
+                font-size: 12px;
+                margin-left: 70px;
+                text-align: right;
+            }.about-right a{
+                color:white;
+                font-size: 12px;
+                text-decoration: none;
+            }.link a:hover{
+                color:red;
+                text-decoration: underline;
+            }#hr-2{
+                border-top: 4px solid red;
+                width:65px;
+                margin-top:-20px;
+                margin-bottom:60px;
+            }
+
+
+            .bottom-hr{
+                margin-top:-50px;
+            }.bottom-content{
+            color: white;
+            margin: 0px;
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="breakfast">
+            <img src=".\Photos\dinner-top-img.jpg"/>
+            <div>
+                <a href="Project_Mangal_Mali.html"><i class="fa-solid fa-arrow-up-from-square"></i> <i class="fa-solid fa-house-user"></i></a>
+            </div> 
+        </div>
+        <div class="timing">
+            <div class="timing-h">
+                <div class="time"> 
+                    <h1>Dinner</h1>
+                </div>
+                <div>
+                    <img src=".\Photos\dinner.png"/>
+                </div>
+                <div>
+                    <h3>Mon - Thu: 2pm - 10pm</h3><hr width="280px">
+                    <h3>Fri: 2pm - 10pm</h3><hr width="280px">
+                    <h3>Sat: 1pm - 10pm</h3><hr width="280px">
+                    <h3>Sun: All Day</h3><hr width="280px">
+                </div>
+                <div>
+                    <a href="Order_mangal_mali.html"> <button>Odear Now</button></a>
+                </div>
+            </div>   
+        </div>
+        <h1 style="margin-left: 110px; margin-top: 50px; font-size: 40px; color: red;">Our Manus ::</h1>
+
+
+        <table class="gallery-box" cellspacing="20px">
+			<tr>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-1.jpg"/>
+                    <div class="food-title">
+                        <h1>Mushrooms</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-2.jpeg"/>
+                    <div class="food-title">
+                        <h1>Dinner Set</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-3.jpeg"/>
+                    <div class="food-title">
+                        <h1>Dinner Set</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-4.jpg"/>
+                    <div class="food-title">
+                        <h1>Maharashtra</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-5.jpg"/>
+                    <div class="food-title">
+                        <h1>Swahili</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-6.jpg"/>
+                    <div class="food-title">
+                        <h1>Chapati</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-7.jpg"/>
+                    <div class="food-title">
+                        <h1>kottu dish</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-8.jpg"/>
+                    <div class="food-title">
+                        <h1>Pol roti</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    <img class="gallery" src=".\Photos\img-9.jpeg"/>
+                    <div class="food-title">
+                        <h1>Indian Thali</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-10.jpeg"/>
+                    <div class="food-title">
+                        <h1>Western food</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-11.jpeg"/>
+                    <div class="food-title">
+                        <h1>Simpal Thali</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-12.jpeg"/>
+                    <div class="food-title">
+                        <h1>Indian Dish</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-13.jpg"/>
+                    <div class="food-title">
+                        <h1>pancakes</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-14.jpg"/>
+                    <div class="food-title">
+                        <h1>Flatbread</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-15.jpg"/>
+                    <div class="food-title">
+                        <h1>Fritters</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-16.avif"/>
+                    <div class="food-title">
+                        <h1>Grain Bread</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    <img class="gallery" src=".\Photos\img-17.jpeg"/>
+                    <div class="food-title">
+                        <h1>Paratha Roll</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-18.jpeg"/>
+                    <div class="food-title">
+                        <h1>Idli</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-19.jpeg"/>
+                    <div class="food-title">
+                        <h1>Food Oil Food</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\img-20.jpeg"/>
+                    <div class="food-title">
+                        <h1>Sagar Special Thali</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-21.jpg"/>
+                    <div class="food-title">
+                        <h1>Side Dish</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-22.jpg"/>
+                    <div class="food-title">
+                        <h1>Sweets Rasgula</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-23.jpg"/>
+                    <div class="food-title">
+                        <h1>Curry Spice</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+				<td>
+                    <img class="gallery" src=".\Photos\dinner-img-24.jpg"/>
+                    <div class="food-title">
+                        <h1>Laddu Dish</h1>
+                    </div>
+                    <div class="desc-food">
+                        <P>Quaerat iusto digniss corporis<br> cupid itate praes entium envor<br> intehiti tilirnt</P>
+                    </div>
+                    <div class="odear-now"><a href="Order_mangal_mali.html">Order</a></div>
+                    <div class="price">
+                        <label>$32.99</label><span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                </td>
+			</tr>
+
+		</table>
+		<div class="gallery-button">
+			<a href="https://www.instagram.com/mr_mangal_saini/"><button class="gallery-button-2"><i class="fa-brands fa-instagram" style="color: white;"></i>   Follow on Instagram</button></a>
+		</div>
+
+        
+        <div class="footer">
+            <div class="footer-2">
+                <div class="about-1">
+                    <h1>CONTACT US</h1>
+                    <hr align="left" id="hr-1"/>
+                    <h4><i class="fa-solid fa-phone-volume" style="color: #f50505;"></i> Call Us</h4>
+                    <h3><pre>  613-518-7434</pre></h3>
+                    <h4><i class="fa-sharp fa-regular fa-envelope" style="color: #ff1605;"></i> Email Us</h4>
+                    <h3><pre>  info@ottawakabab.com</pre></h3>
+                    <h4><i class="fa-solid fa-location-dot" style="color: #f71b02;"></i> Our Location</h4>
+                    <h3><pre>  577 Gladstone Ave Ottawa,</pre><pre>  ON K1R5P2</pre></h3>
+                </div>
+                <div class="about-center">
+                    <img class="about-center-img" src=".\Photos\bottom-logo.png"/>
+                    <h3>Whisper to us about your feelings,<br> and we will prepare what you need<br><font align="center" style="margin-left:42%;">now.</font></h3>
+                    <i class="fa-brands fa-square-facebook " ></i>  <i class="fa-brands fa-square-instagram"></i><i class="fa-brands fa-square-whatsapp"></i>
+                </div>
+                <div class="about-right">
+                    <h1>quick links</h1>
+                    <hr align="right" id="hr-2"/>
+                    <h3 class="link"><a href="Project_Mangal_Mali.html"><h1>Home</h1></a></h3>
+                    <h3 class="link"><a href="Project_Mangal_Mali.html"><h1>Menu</h1></a></h3>
+                    <h3 class="link"><a href="Events_Mangal_Mali.html"><h1>Events</h1></a></h3>
+                    <h3 class="link"><a href="Service_Mangal_Mali.html"><h1>Service</h1></a></h3>
+                    <h3 class="link"><a href="Contect_mangal_mali.html"><h1>Contact</h1></a></h3>
+                </div>
+            </div>
+           
+        </div>
+        <hr class="bottom-hr">
+        <h4 class="bottom-content"> 2017 All Rights Reserved by Scanfcode.<br> &copy  2022 Copyright :<b style="color: red;"> MANGAL CHAND MALI</b> </h4>
+    </body>
+</html>
